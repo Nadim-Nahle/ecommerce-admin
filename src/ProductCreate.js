@@ -37,7 +37,6 @@ const ProductCreate = (props) => {
         <NumberInput source='quantity' />
         <TextInput source='image' />
         <NumberInput source='price' />
-        <TextInput source='description' />
       </SimpleForm>
     </Create>
   );
