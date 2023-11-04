@@ -1,17 +1,22 @@
-import { Admin, Resource, ListGuesser, EditGuesser, Create, SimpleForm, TextInput } from 'react-admin';
-import './App.css';
-import dataProvider from './dataProvider';
-import ProductCreate from './ProductCreate';
-import ProductList from './ProductList';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SignIn from './SignIn';
+import ReactAdmin from './ReactAdmin';
+import RequireAuth from './RequireAuth';
 
-function App() {
+const App = () => {
   return (
-    <Admin dataProvider={dataProvider}>
-      <Resource name="products" list={ProductList} edit={EditGuesser} create={ProductCreate}/>
-      <Resource name="users" list={ListGuesser} />
-    </Admin>
+    
+      <Routes>
+        <Route path="/login" element={<SignIn />} />
+        
+        {/* Define other routes using the <Route> component */}
+        <Route element={<RequireAuth  />}>
+        <Route path="/*" element={<ReactAdmin />} />
+        </Route>
+      </Routes>
+    
   );
-}
-
+};
 
 export default App;
