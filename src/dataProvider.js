@@ -1,11 +1,12 @@
 import { fetchUtils } from 'react-admin';
 import jsonServerProvider from 'ra-data-json-server';
 
+const auth = process.env.REACT_APP_AUTH
 const httpClient = (url, options = {}) => {
   if (!options.headers) {
     options.headers = new Headers({ Accept: 'application/json' });
   }
-  options.headers.set('auth-api', '5eb80460-69ac-4df7-af84-021db8043a59');
+  options.headers.set('auth-api', auth);
   return fetchUtils.fetchJson(url, options);
 };
 
