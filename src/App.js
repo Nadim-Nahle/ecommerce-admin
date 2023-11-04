@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import SignIn from './SignIn';
 import ReactAdmin from './ReactAdmin';
 import RequireAuth from './RequireAuth';

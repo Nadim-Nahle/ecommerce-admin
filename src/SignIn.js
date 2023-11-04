@@ -11,10 +11,11 @@ const SignIn = () => {
   const auth = FIRBASE_AUTH;
   const { setAuth } = useAuth();
   const navigate = useNavigate();
+  const auth_key = process.env.REACT_APP_AUTH
 
   async function fetchUserById(userId) {
     const apiUrl = `http://127.0.0.1:5001/ecommerce-nadim/us-central1/api/users/${userId}`;
-    const authHeader = '5eb80460-69ac-4df7-af84-021db8043a59';
+    const authHeader = auth_key;
   
     try {
       const response = await fetch(apiUrl, {

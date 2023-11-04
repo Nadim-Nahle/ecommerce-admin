@@ -2,13 +2,18 @@
 import { initializeApp } from "firebase/app";
 import { getAuth} from "firebase/auth";
 
+const appId = process.env.REACT_APP_ID
+const storageBucket = process.env.REACT_APP_BUCKET
+const messagingSenderId = process.env.REACT_APP_MESSAGE
+const apiKey = process.env.REACT_APP_API_KEY
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCK-152ZfXnyXJXil_LR0YqXU3j6IbQUXs",
+  apiKey: apiKey,
   authDomain: "ecommerce-nadim.firebaseapp.com",
   projectId: "ecommerce-nadim",
-  storageBucket: "ecommerce-nadim.appspot.com",
-  messagingSenderId: "91104786042",
-  appId: "1:91104786042:web:27296d7c327a15b1c42dc3"
+  storageBucket:storageBucket,
+  messagingSenderId: messagingSenderId,
+  appId: appId
 };
 
 // Initialize Firebase
