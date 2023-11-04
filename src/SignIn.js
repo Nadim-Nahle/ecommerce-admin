@@ -14,7 +14,7 @@ const SignIn = () => {
   const auth_key = process.env.REACT_APP_AUTH
 
   async function fetchUserById(userId) {
-    const apiUrl = `http://127.0.0.1:5001/ecommerce-nadim/us-central1/api/users/${userId}`;
+    const apiUrl = `https://us-central1-ecommerce-nadim.cloudfunctions.net/api/users/${userId}`;
     const authHeader = auth_key;
   
     try {

@@ -11,7 +11,7 @@ const httpClient = (url, options = {}) => {
 };
 
 const jsonServerDataProvider = jsonServerProvider(
-  'http://127.0.0.1:5001/ecommerce-nadim/us-central1/api',
+  'https://us-central1-ecommerce-nadim.cloudfunctions.net/api',
   httpClient
 );
 
