@@ -19,8 +19,12 @@ const UserUpdate = (props) => {
         <Edit {...props}>
             <SimpleForm save={handleSave}>
                 <SelectInput source='role' choices={[
-                    { id: 'user', name: 'User' },
-                    { id: 'admin', name: 'Admin' },
+                    { id: 'tout', name: 'tout' },
+                    { id: 'user', name: 'user' },
+                    { id: 'admin', name: 'admin' },
+                    { id: 'cosmetique', name: 'cosmetique' },
+                    { id: 'divers', name: 'divers' },
+                    { id: 'saisonnier', name: 'saisonnier' },
                 ]} />
                 <DeleteButton basePath='/users'/>
             </SimpleForm>

@@ -35,8 +35,12 @@ const UserCreate = (props) => {
         <TextInput source='password' />
         <TextInput source='name' />
         <SelectInput source='role' choices={[
-                    { id: 'user', name: 'User' },
-                    { id: 'admin', name: 'Admin' },
+                    { id: 'tout', name: 'tout' },
+                    { id: 'user', name: 'user' },
+                    { id: 'admin', name: 'admin' },
+                    { id: 'cosmetique', name: 'cosmetique' },
+                    { id: 'divers', name: 'divers' },
+                    { id: 'saisonnier', name: 'saisonnier' },
                 ]} />
       </SimpleForm>
     </Create>
