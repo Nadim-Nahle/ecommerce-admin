@@ -16,7 +16,9 @@ const Orders = () => {
             'auth-api': '5eb80460-69ac-4df7-af84-021db8043a59',
           },
         });
-        setOrders(response.data);
+        const sortedOrders = response.data.sort((a, b) => b.order_number - a.order_number);
+
+        setOrders(sortedOrders);
       } catch (error) {
         console.error('Error fetching orders:', error);
       } finally {
