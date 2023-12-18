@@ -10,12 +10,10 @@ const ProductList = (props) => {
   return (
     <List {...props} filters={postFilters}>
         <Datagrid>
-        <TextField source='id'/>
         <TextField source='ref'/>
         <TextField source='name'/>
         <TextField source='category'/>
         <TextField source='quantity'/>
-        <TextField source='image'/>
         <TextField source='price'/>
         <EditButton basePath='/products'/>
         <DeleteButton basePath='/products'/>
