@@ -13,7 +13,7 @@ const Orders = () => {
       try {
         const response = await axios.get('https://us-central1-ecommerce-nadim.cloudfunctions.net/api/orders', {
           headers: {
-            'auth-api': '5eb80460-69ac-4df7-af84-021db8043a59',
+            'auth-api': proceprocess.env.authAPI,
           },
         });
         const sortedOrders = response.data.sort((a, b) => b.order_number - a.order_number);
